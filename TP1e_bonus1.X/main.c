@@ -11,8 +11,11 @@ lente et bloquante du second chenillard.
 #include "../Ressources/configbits.h" // Bits de configuration
 #include <xc.h>         // Definition des registres specifiques au uC
 #include "../Ressources/leds.h"
+#include "../Ressources/leds.c"
 #include "../Ressources/timer.h"
+#include "../Ressources/timer.c"
 #include "../Ressources/interrupt.h"
+#include "../Ressources/interrupt.c"
 
 // MCU : PIC16F1719 
 
