@@ -19,6 +19,8 @@
                    projectFiles="true">
       <itemPath>main.c</itemPath>
       <itemPath>../Ressources/leds.c</itemPath>
+      <itemPath>../Ressources/timer.c</itemPath>
+      <itemPath>../Ressources/interrupt.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
