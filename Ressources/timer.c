@@ -2,7 +2,7 @@
 #include "timer.h"
 
 /**
-Time = (Period + 1) * ( (Prescaler * Postscaler) / (Fosc/4) ) µs
+Time = (Period + 1) * Prescaler * Postscaler * (4/Fosc) µs
 
 Fosc = 8
 
@@ -33,7 +33,7 @@ Postscaler values :
 0000 = 1:1 Postscaler
 
 */
-void config_timer2(int period, int prescaler, int postscaler) {
+void config_timer2(char period, char prescaler, char postscaler) {
     PR2 = period; // Period register = 249
     T2CONbits.T2CKPS = prescaler; // Prescaler = 1:1
     T2CONbits.T2OUTPS = postscaler; // Postscaler = 1:8
