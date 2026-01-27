@@ -41,15 +41,11 @@ void config_timer2(int period, int prescaler, int postscaler) {
 }
 
 void config_timer2_for_1ms(void) {
-    config_timer2(249, 0b00, 0b0111)
+    config_timer2(249, 0b00, 0b0111);
 }
 
 void config_timer2_for_120ms(void) {
-    config_timer2(249, 0b11, 0b1110)
-}
-
-void config_timer2_for_1ms(void) {
-    config_timer2(249, 0b00, 0b0111)
+    config_timer2(249, 0b11, 0b1110);
 }
 
 void wait_timer2(void) {
