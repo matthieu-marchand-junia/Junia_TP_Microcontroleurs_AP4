@@ -1,16 +1,16 @@
 #include <xc.h>
-#include "configbits.h"
+#include "../Ressources/configbits.h"
 
 /*
 Le module PPS (RC6PPS, RXPPS) connecte le module
 de communication aux pattes RC6 et RC7
 */
 void init_serial(void) {
-    RC6PPS = 0x14; 
-    RXPPS = 0x17;  
+    RC6PPS = 0b00010100;
+    RXPPS = 0b00010111;
 
     // RC6 en output
-    LATCbits.LATC6 = 0;
+    LATCbits.LATC6 = 1;
     TRISCbits.TRISC6 = 0;  
     
     // RC7 en input
@@ -65,6 +65,7 @@ void main(void) {
     init_all();
     
     while (1) {
-        display_text("Hello, World!");
+        display_text("Hello, World!\r\n");
+        for(unsigned long i=0; i<200000; i++); 
     }
 }
