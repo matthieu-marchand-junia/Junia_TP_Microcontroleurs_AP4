@@ -1,5 +1,5 @@
-#ifndef LEDS_H
-#define	LEDS_H
+#ifndef _LEDS_H_
+#define	_LEDS_H_
 
 #define LED1 LATDbits.LATD0
 #define LED2 LATDbits.LATD1

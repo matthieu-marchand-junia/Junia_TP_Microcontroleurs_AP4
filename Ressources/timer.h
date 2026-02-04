@@ -1,6 +1,6 @@
 #include <xc.h>
-#ifndef TIMER_H
-#define	TIMER_H
+#ifndef _TIMER_H_
+#define	_TIMER_H_
 
 #define TIMER2_FLAG PIR1bits.TMR2IF
 #define TIMER2_ENABLE PIE1bits.TMR2IE

@@ -1,6 +1,6 @@
 #include <xc.h>
-#ifndef INTERRUPT_H
-#define	INTERRUPT_H
+#ifndef _INTERRUPT_H_
+#define	_INTERRUPT_H_
 
 void config_interrupt(void);
 

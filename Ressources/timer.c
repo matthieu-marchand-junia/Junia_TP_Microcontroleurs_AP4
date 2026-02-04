@@ -1,6 +1,8 @@
 #include <xc.h>
 #include "timer.h"
 
+#ifndef _TIMER_C_
+#define	_TIMER_C_
 /**
 Time = (Period + 1) * Prescaler * Postscaler * (4/Fosc) µs
 
@@ -58,3 +60,4 @@ void start_timer2() {
     TIMER2_FLAG = 0; // Initialiser le flag TIMER2 pour attendre l'interruption
 }
  
+#endif

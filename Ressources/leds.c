@@ -1,6 +1,9 @@
 #include <xc.h>
 #include "leds.h"
 
+#ifndef _LEDS_C_
+#define	_LEDS_C_
+
 void config_leds(void) {
     TRISD &= 0xF0; // Configuration des leds D1 à D4
     TRISB &= 0xF0; // Configuration des leds D5 à D8
@@ -85,3 +88,5 @@ void set_led_from_pps(int output_led, char input_device) {
             break;
     }
 }
+
+#endif

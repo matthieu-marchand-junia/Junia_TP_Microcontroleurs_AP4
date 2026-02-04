@@ -1,6 +1,9 @@
 #include <xc.h>
 #include "pot.h"
 
+#ifndef _POT_C_
+#define _POT_C_
+
 void config_pot() {
     TRISAbits.TRISA0 = 1;
     ANSELAbits.ANSA0 = 1;
@@ -15,3 +18,5 @@ unsigned char read_pot() {
     while(ADCON0bits.GO){}
     return ADRESH;
 }
+
+#endif
